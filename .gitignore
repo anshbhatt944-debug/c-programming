@@ -1,0 +1,12 @@
+# VS Code settings
+.vscode/
+
+# Windows executables
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.pdb
