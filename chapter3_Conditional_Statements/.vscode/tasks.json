@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build active file",
+      "type": "shell",
+      "command": "/usr/bin/gcc",  // Change to the correct path of gcc in your system (e.g., 'gcc' on Linux/macOS or 'C:/MinGW/bin/gcc.exe' on Windows)
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Generated task by Debugger"
+    }
+  ]
+}

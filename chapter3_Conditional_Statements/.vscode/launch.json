@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug C++ file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "miDebuggerPath": "/usr/bin/gdb",  // Change to the correct path of gdb in your system (e.g., 'gdb' on Linux/macOS or 'C:/MinGW/bin/gdb.exe' on Windows)
+      "preLaunchTask": "build active file",  // This ensures the file is compiled before launching
+      "visualizerFile": "${fileDirname}/.vscode/cpptools.natvis"
+    }
+  ]
+}
